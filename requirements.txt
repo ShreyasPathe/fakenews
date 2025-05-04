@@ -2,8 +2,8 @@ streamlit
 firebase-admin
 requests
 beautifulsoup4
-lxml
-newspaper3k
+newspaper3k==0.2.8
+lxml==4.9.3
 scikit-learn
 pandas
 numpy
