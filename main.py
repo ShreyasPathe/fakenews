@@ -10,7 +10,6 @@ from knowmore import show_information
 
 # Load Firebase credentials
 cred = credentials.Certificate("firebase_config.json")
-firebase_admin.initialize_app(cred)
 
 # Initialize Firebase
 if not firebase_admin._apps:
