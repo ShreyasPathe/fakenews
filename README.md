@@ -21,7 +21,6 @@ This project leverages machine learning models to analyze and predict whether a 
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/fake-news-detection.git
-````
 
 2. Navigate into the project directory:
 
