@@ -1,8 +1,14 @@
 streamlit
 firebase-admin
 requests
+beautifulsoup4
+lxml
+newspaper3k
+scikit-learn
 pandas
 numpy
-scikit-learn
 matplotlib
 plotly
+tqdm
+joblib
+
