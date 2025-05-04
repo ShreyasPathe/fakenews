@@ -1,7 +1,5 @@
 import streamlit as st
 import time
-import json
-import tempfile
 import firebase_admin
 from firebase_admin import auth, credentials, firestore
 from extract import extract_article_content
@@ -12,16 +10,11 @@ from knowmore import show_information
 # Load Firebase credentials from Streamlit secrets (TOML format)
 firebaseConfig = st.secrets["firebase_config"]
 
-# Create a temporary JSON file with the credentials
-with tempfile.NamedTemporaryFile(delete=False, mode="w", suffix=".json") as temp_file:
-    json.dump(firebaseConfig, temp_file)
-    temp_file_path = temp_file.name
-
 # Initialize Firebase
 if not firebase_admin._apps:
     try:
-        # Pass the file path of the temporary JSON file to Firebase admin
-        cred = credentials.Certificate(temp_file_path)
+        # Directly use the firebaseConfig dictionary without writing it to a file
+        cred = credentials.Certificate(firebaseConfig)
         firebase_admin.initialize_app(cred)
     except Exception as e:
         st.error(f"Error initializing Firebase: {e}")
