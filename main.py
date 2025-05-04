@@ -2,21 +2,17 @@ import streamlit as st
 import time
 import firebase_admin
 from firebase_admin import auth, credentials, firestore
-import json
 from extract import extract_article_content
 from news_predict import predict_news
 from visualize import animate_bar_chart, animate_pie_chart
 from knowmore import show_information
 
 # Load Firebase credentials from Streamlit secrets
-firebase_config = st.secrets["firebase_config"]
-
-# Convert the secrets to a JSON-like object (if it's not already in that format)
-firebase_config_json = json.loads(json.dumps(firebase_config))
+firebaseConfig = st.secrets["firebase_config"]
 
 # Initialize Firebase
 if not firebase_admin._apps:
-    cred = credentials.Certificate(firebase_config_json)
+    cred = credentials.Certificate(firebaseConfig)  # Directly pass the secrets as a dictionary
     firebase_admin.initialize_app(cred)
 
 # Firestore client
