@@ -9,11 +9,14 @@ from visualize import animate_bar_chart, animate_pie_chart
 from knowmore import show_information
 
 # Load Firebase credentials from Streamlit secrets
-firebaseConfig = st.secrets["firebase_config"]
+firebase_config = st.secrets["firebase_config"]
+
+# Convert the secrets to a JSON-like object (if it's not already in that format)
+firebase_config_json = json.loads(json.dumps(firebase_config))
 
 # Initialize Firebase
 if not firebase_admin._apps:
-    cred = credentials.Certificate(firebaseConfig)
+    cred = credentials.Certificate(firebase_config_json)
     firebase_admin.initialize_app(cred)
 
 # Firestore client
