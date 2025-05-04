@@ -12,3 +12,4 @@ matplotlib
 plotly
 tqdm
 joblib
+json
