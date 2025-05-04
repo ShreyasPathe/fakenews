@@ -9,8 +9,7 @@ from visualize import animate_bar_chart, animate_pie_chart
 from knowmore import show_information
 
 # Load Firebase credentials
-with open("firebase_config.json") as f:
-    firebaseConfig = json.load(f)
+cred = credentials.Certificate("firebase_config.json")
 
 # Initialize Firebase
 if not firebase_admin._apps:
