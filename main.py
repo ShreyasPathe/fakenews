@@ -8,9 +8,8 @@ from news_predict import predict_news
 from visualize import animate_bar_chart, animate_pie_chart
 from knowmore import show_information
 
-# Load Firebase credentials
-with open("firebase_config.json") as f:
-    firebaseConfig = json.load(f)
+# Load Firebase credentials from Streamlit secrets
+firebaseConfig = st.secrets["firebase_config"]
 
 # Initialize Firebase
 if not firebase_admin._apps:
