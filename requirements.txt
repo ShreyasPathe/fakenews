@@ -1,4 +1,5 @@
 streamlit
+tensorflow
 firebase-admin
 requests
 beautifulsoup4
