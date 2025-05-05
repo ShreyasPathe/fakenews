@@ -66,16 +66,3 @@ If you encounter any issues or need further assistance, feel free to reach out a
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-
-### Explanation:
-1. **Project Overview**: Describes the project and its main features.
-2. **Installation**: Provides steps to set up and run the app locally, including prerequisites and installation instructions.
-3. **Firebase Configuration**: Alerts the user not to misuse the Firebase credentials.
-4. **Project Structure**: Lists the core files in the project.
-5. **Support**: Provides contact information for any issues or questions.
-6. **License**: A placeholder for licensing info (MIT in this case, but you can change it if you prefer a different license).
-
-This will give users clear instructions to get started with your project. Let me know if you need any further adjustments!
-```
